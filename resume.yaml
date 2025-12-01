@@ -1,0 +1,93 @@
+name: "Maximillian V. Phillips"
+location: "Dallas, TX"
+email: "[max@maxvphillips.com](mailto:max@maxvphillips.com)"
+website: "[maxvphillips.com](https://www.maxvphillips.com/)"
+
+skills:
+  - category: "Docs-as-Code"
+    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git", "Python"]
+  
+  - category: "Content Strategy & Design"
+    items: ["Information Architecture", "UX Writing", "Style Guides", "Figma"]
+    
+  - category: "Tools & Platforms"
+    items: ["Jira", "Confluence", "Amplitude", "GitHub", "AI prompt engineering"]
+#  - category: "Content Engineering & Docs-as-Code"
+#    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git/GitHub", "Python", "Confluence"]
+#  
+#  - category: "Content Strategy & UX Tools"
+#    items: ["Figma", "Jira", "Confluence", "Amplitude", "Information Architecture", "UX Writing"]
+#    
+#  - category: "Technical Writing & AI"
+#    items: ["AI Prompt Engineering", "Windsurf", "Style Guides", "Technical Editing"]
+#  - category: "Tools"
+#    items: ["Figma", "Git", "Jira", "Confluence", "Amplitude"]
+#    items: ["Figma", "Git", "Jira", "Confluence", "Adobe CC (Photoshop, InDesign, Illustrator, Premiere Pro)"]
+#  - category: "Languages"
+#    items: ["HTML", "CSS", "Astro", "JavaScript/TypeScript", "Markdown/MDX", "Python", "JSON"]
+#    items: ["HTML", "CSS", "Astro", "JavaScript", "Markdown", "Python", "JSON", "LaTeX", "Java", "C#"]
+
+experience:
+  - company: "Cloudflare"
+    location: "Remote"
+    roles:
+      - title: "Technical Writer"
+        dates: "January 2023 - Present"
+        responsibilities:
+          - "Led team of 5 writers to update 1000+ docs pages to make cohesive user experience."
+          - "Developed internal AI  app to detect changes in products and update videos in documentation."
+      - title: "Tech Writer Intern"
+        dates: "May 2022 - August 2022"
+        responsibilities:
+          - "Authored new technical documentation for Argo Smart Routing to serve three million monthly visitors."
+          - "Implemented extensible HTML components to unify user experience across product docs."
+          - "Advocated for refined language and site features to promote accessibility and inclusion."
+      # Add your internship here when you want nested roles:
+#      - title: "Technical Writing Intern"
+#        dates: "Summer 2022"
+#        responsibilities:
+#          - "Your internship responsibilities here"
+  
+#  - company: "University of Pittsburgh Information Technology"
+#    location: "Pittsburgh, PA"
+#    roles:
+#      - title: "Endpoint Technician"
+#        dates: "October 2021 - December 2022"
+#        responsibilities:
+#          - "Troubleshot and resolved software, hardware, and networking issues for over 200 end users."
+#          - "Deployed critical information systems infrastructure in accordance with industry standards."
+#          - "Coordinated with team of 16 students and professional staff members to identify effective IT solutions."
+  
+  - company: "Pitt Computational Social Dynamics Lab"
+    location: "Pittsburgh, PA"
+    roles:
+      - title: "Research Assistant"
+        dates: "October 2021 - December 2022"
+        responsibilities:
+          - "Investigated impact of mass communication and social media on regional civic action across the US."
+          - "Instituted guidelines for consistent interpretation of language between researchers."
+          - "Produced introductory video to showcase interactive policy tracking system."
+
+education:
+  - institution: "University of Pittsburgh"
+    degree: "Bachelor of Science, Digital Narrative and Interactive Design"
+    graduation: "December 2022"
+    #gpa: "3.9/4.0"
+    gpa: "Summa Cum Laude"
+#    coursework: ["Human-Centered Systems", "Technical Writing", "Usability Testing", "Visual Literacy", "Integrating Writing and Design", "Social Implications of Technology", "Data Structures/Algorithms"]
+
+projects:
+  - name: "Argo Smart Routing docs"
+    technologies: ["HTML", "CSS", "Figma"]
+    url: "[developers.cloudflare.com/argo-smart-routing](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/)"
+    description: "Created new documentation for Cloudflare Argo Smart Routing by compiling product information to establish single point-of-presence for over three million monthly visitors."
+  
+#  - name: "Drops"
+#    technologies: ["HTML", "CSS", "JavaScript"]
+#    url: "maxvphillips.com/drops"
+#    description: "Designed virtual museum exhibit site in the style of 1990s operating systems to explore the relationship between media and modern digital distribution platforms."
+#  
+#  - name: "Burghquest"
+#    technologies: ["Unity", "C#", "Vuforia Engine", "Blender"]
+#    url: "youtu.be/DOGXo5Eu62U"
+#    description: "Developed mobile augmented reality application to allow users to experience Pittsburgh history by interacting with local food and cultural touchstones."
