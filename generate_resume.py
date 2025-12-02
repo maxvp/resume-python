@@ -40,7 +40,7 @@ TEMPLATE = """
         }
         
         body {
-            font-family: Arial, Helvetica, "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             font-size: 11pt;
             line-height: 1.4;
             color: #000;
