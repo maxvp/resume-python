@@ -30,7 +30,7 @@ TEMPLATE = """
     <style>
         @page {
             size: letter;
-            margin: 0.5in 0.75in;
+            margin: 0.75in 0.75in;
         }
         
         * {

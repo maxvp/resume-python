@@ -5,13 +5,13 @@ website: "[maxvphillips.com](https://www.maxvphillips.com/)"
 
 skills:
   - category: "Content Strategy & UX"
-    items: ["Content Analytics", "Information Architecture", "Journey Maps", "Style Guides"]
+    items: ["Content Analytics", "Information Architecture", "User Journey Mapping", "Style Guides", "Content Component Libraries", "User Research & Testing"]
   
   - category: "Docs-as-Code & Development"
     items: ["MDX/Markdown", "Git", "Astro", "HTML/CSS", "TypeScript", "Python"]
     
   - category: "Tools & AI Workflows"
-    items: ["AI Prompt Engineering", "Amplitude", "Figma", "Jira", "Confluence", "Miro"]
+    items: [ "Amplitude", "Figma", "Jira", "Confluence", "Miro", "AI Prompt Engineering"]
 #  - category: "Content Engineering & Docs-as-Code"
 #    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git/GitHub", "Python", "Confluence"]
 #  
@@ -34,9 +34,9 @@ experience:
       - title: "Technical Writer"
         dates: "January 2023 - Present"
         responsibilities:
-          - "Serve as the primary point-of-contact for the developer documentation channel, fielding input from cross-functional partners across the entire organization to streamline feedback and maintain."
-          - "Developing AI-powered automation to detect dashboard changes and update screenshots and videos in documentation to reduce manual maintenance overhead."
-          - "Led team of 7 writers to update 1000+ docs pages to create a unified, data-driven user experience between the docs and product area."
+          - "Reduced manual maintenance overhead by developing AI content maintenance system to detect dashboard changes and automatically update inline screenshots and videos on docs site."
+          - "Unified enterprise Zero Trust docs and product user experience by leading data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions."
+          - "Serve as primary point of contact for open source Cloudflare Docs site to triage feedback and drive consistent content decisions with cross-functional partners."
 
   - company: "Cloudflare"
     location: "Remote"
@@ -44,24 +44,14 @@ experience:
       - title: "Tech Writer Intern"
         dates: "May 2022 - August 2022"
         responsibilities:
-          - "Authored new technical documentation for [web performance product](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/) to serve three million monthly unique visitors."
-          - "Implemented extensible Hugo site components to unify user experience across product docs."
-          - "Advocated for refined language and site features to promote accessibility and inclusion."
+          - "Served 3M+ unique monthly visitors by creating documentation for [web performance product](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/)."
+          - "Unified user experience across product docs by implementing extensible Hugo site components."
+          - "Promoted accessibility and inclusion by advocating for refined language and site improvements."
       # Add your internship here when you want nested roles:
 #      - title: "Technical Writing Intern"
 #        dates: "Summer 2022"
 #        responsibilities:
 #          - "Your internship responsibilities here"
-  
-  - company: "University of Pittsburgh Information Technology"
-    location: "Pittsburgh, PA"
-    roles:
-      - title: "Endpoint Technician"
-        dates: "October 2021 - December 2022"
-        responsibilities:
-          - "Troubleshot and resolved software, hardware, and networking issues for over 200 end users."
-          - "Deployed critical information systems infrastructure in accordance with industry standards."
-          - "Coordinated with team of 16 staff members to identify effective IT solutions."
   
   - company: "Pitt Computational Social Dynamics Lab"
     location: "Pittsburgh, PA"
@@ -69,9 +59,15 @@ experience:
       - title: "Research Assistant"
         dates: "October 2021 - December 2022"
         responsibilities:
-          - "Investigated impact of mass media and social media on regional civic action in the US."
-          - "Instituted guidelines for consistent interpretation of language between researchers."
-          - "Produced introductory video to showcase interactive policy tracking system."
+          - "Established guidelines for consistent interpretation of language between researchers to investigate impact of mass media and social media on regional civic action in the United States."
+
+  - company: "University of Pittsburgh Information Technology"
+    location: "Pittsburgh, PA"
+    roles:
+      - title: "Endpoint Technician"
+        dates: "October 2021 - December 2022"
+        responsibilities:
+          - "Coordinated 16-person IT staff to deploy critical information systems infrastructure in accordance with industry standards for 200+ academic institution members."
 
 education:
   - institution: "University of Pittsburgh"
@@ -86,7 +82,7 @@ awards:
     organization: "[DevPortal Awards](https://devportalawards.org/winners?year=2025)"
     date: "November 2025"
     team: "Cloudflare Docs"
-    description: "Drove the unified enterprise user experience for Cloudflare One documentation."
+    description: "Led unified Cloudflare One documentation experience efforts to serve enterprise users."
 
 #projects:
 #  - name: "Argo Smart Routing docs"
