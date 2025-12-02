@@ -1,25 +1,4 @@
-#!/usr/bin/env python3
-"""
-Resume Generator - Convert YAML resume to PDF
-Usage: python generate_resume.py
-"""
 
-import yaml
-from jinja2 import Template
-from weasyprint import HTML
-import os
-import re
-
-def parse_markdown_links(text):
-    """Convert Markdown-style links [text](url) to HTML <a> tags."""
-    if not text:
-        return text
-    # Regex to match [text](url)
-    pattern = r'\[([^\]]+)\]\(([^\)]+)\)'
-    return re.sub(pattern, r'<a href="\2">\1</a>', text)
-
-# HTML/CSS template matching your current resume style
-TEMPLATE = """
 <!DOCTYPE html>
 <html>
 <head>
@@ -185,115 +164,117 @@ TEMPLATE = """
 </head>
 <body>
     <div class="header">
-        <h1>{{ name }}</h1>
-        <div class="contact">{{ parse_links(location) }} — {{ parse_links(email) | safe }} — {{ parse_links(website) | safe }}</div>
+        <h1>Maximillian V. Phillips</h1>
+        <div class="contact">Dallas, TX — <a href="mailto:max@maxvphillips.com">max@maxvphillips.com</a> — <a href="https://www.maxvphillips.com/">maxvphillips.com</a></div>
     </div>
     
     <div class="section">
         <div class="section-title">Skills</div>
         <div class="skills-list">
-            {% for skill in skills %}
-            <div class="skill-item">• <strong>{{ skill.category }}:</strong> {% for item in skill.get('items', []) %}{{ parse_links(item) | safe }}{% if not loop.last %}, {% endif %}{% endfor %}</div>
-            {% endfor %}
+            
+            <div class="skill-item">• <strong>Content Strategy & UX:</strong> Information Architecture, User Journey Mapping, Content Analytics, Style Guides</div>
+            
+            <div class="skill-item">• <strong>Docs-as-Code & Development:</strong> Astro, MDX, HTML/CSS, TypeScript, Git, Python</div>
+            
+            <div class="skill-item">• <strong>Tools & AI Workflows:</strong> Figma, AI Prompt Engineering, Jira, Confluence, Amplitude</div>
+            
         </div>
     </div>
     
     <div class="section">
         <div class="section-title">Experience</div>
-        {% for job in experience %}
+        
         <div class="experience-item">
-            {% for role in job.roles %}
+            
             <div class="role-item">
                 <div class="role-header">
-                    <span style="font-weight: 600;">{{ parse_links(role.title) | safe }}</span>
-                    <span class="role-dates">{{ role.dates }}</span>
+                    <span style="font-weight: 600;">Technical Writer</span>
+                    <span class="role-dates">January 2023 - Present</span>
                 </div>
-                <div style="margin-bottom: 2pt;">{{ parse_links(job.company) | safe }} • {{ job.location }}</div>
+                <div style="margin-bottom: 2pt;">Cloudflare • Remote</div>
                 <ul class="responsibilities">
-                    {% for resp in role.responsibilities %}
-                    <li>{{ parse_links(resp) | safe }}</li>
-                    {% endfor %}
+                    
+                    <li>Led team of 5 writers to update 1000+ docs pages to make cohesive user experience.</li>
+                    
+                    <li>Developing AI-powered automation to detect dashboard changes and update screenshots/videos in documentation, reducing manual maintenance overhead.</li>
+                    
+                    <li>Developed internal AI  app to detect changes in products and update videos in documentation.</li>
+                    
                 </ul>
             </div>
-            {% endfor %}
+            
         </div>
-        {% endfor %}
+        
+        <div class="experience-item">
+            
+            <div class="role-item">
+                <div class="role-header">
+                    <span style="font-weight: 600;">Tech Writer Intern</span>
+                    <span class="role-dates">May 2022 - August 2022</span>
+                </div>
+                <div style="margin-bottom: 2pt;">Cloudflare • Remote</div>
+                <ul class="responsibilities">
+                    
+                    <li>Authored new technical documentation for Argo Smart Routing to serve three million monthly visitors.</li>
+                    
+                    <li>Implemented extensible HTML components to unify user experience across product docs.</li>
+                    
+                    <li>Advocated for refined language and site features to promote accessibility and inclusion.</li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="experience-item">
+            
+            <div class="role-item">
+                <div class="role-header">
+                    <span style="font-weight: 600;">Research Assistant</span>
+                    <span class="role-dates">October 2021 - December 2022</span>
+                </div>
+                <div style="margin-bottom: 2pt;">Pitt Computational Social Dynamics Lab • Pittsburgh, PA</div>
+                <ul class="responsibilities">
+                    
+                    <li>Investigated impact of mass media and social media on regional civic action in the US.</li>
+                    
+                    <li>Instituted guidelines for consistent interpretation of language between researchers.</li>
+                    
+                    <li>Produced introductory video to showcase interactive policy tracking system.</li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+        
     </div>
     
     <div class="section">
         <div class="section-title">Awards</div>
-        {% for award in awards %}
+        
         <div class="experience-item">
             <div class="role-header">
-                <span style="font-weight: 600;">{{ parse_links(award.name) | safe }}</span>
-                <span class="role-dates">{{ award.date }}</span>
+                <span style="font-weight: 600;">Best Unified Enterprise Developer Portal</span>
+                <span class="role-dates">November 2025</span>
             </div>
-            <div style="margin-bottom: 2pt;">{{ parse_links(award.organization) | safe }}{% if award.team %} • {{ award.team }}{% endif %}</div>
-            {% if award.description %}
-            <ul class="responsibilities">
-                <li>{{ parse_links(award.description) | safe }}</li>
-            </ul>
-            {% endif %}
+            <div style="margin-bottom: 2pt;">DevPortal Awards • Cloudflare Developer Documentation</div>
+            
         </div>
-        {% endfor %}
+        
     </div>
     
     <div class="section">
         <div class="section-title">Education</div>
-        {% for edu in education %}
+        
         <div class="education-item">
             <div class="education-header">
-                <span class="institution">{{ parse_links(edu.degree) | safe }}</span>
-                <span style="font-style: italic;">{{ edu.graduation }}</span>
+                <span class="institution">Bachelor of Science, Digital Narrative and Interactive Design</span>
+                <span style="font-style: italic;">December 2022</span>
             </div>
-            <div style="margin-bottom: 2pt;">{{ parse_links(edu.institution) | safe }}{% if edu.gpa %} • {{ edu.gpa }}{% endif %}</div>
-            {% if edu.coursework %}
-            <div class="coursework">
-                <strong>• Coursework:</strong> {% for course in edu.coursework %}{{ parse_links(course) | safe }}{% if not loop.last %}, {% endif %}{% endfor %}
-            </div>
-            {% endif %}
+            <div style="margin-bottom: 2pt;">University of Pittsburgh • Summa Cum Laude</div>
+            
         </div>
-        {% endfor %}
+        
     </div>
 </body>
 </html>
-"""
-
-def generate_resume(yaml_file='resume.yaml', output_pdf='resume.pdf', output_html='resume.html'):
-    """Generate PDF and HTML resume from YAML file."""
-    
-    if not os.path.exists(yaml_file):
-        print(f"Error: {yaml_file} not found. Please create the file first.")
-        return
-
-    # Load YAML data
-    try:
-        with open(yaml_file, 'r') as f:
-            data = yaml.safe_load(f)
-    except yaml.YAMLError as e:
-        print(f"Error parsing YAML: {e}")
-        return
-
-    # Render template
-    template = Template(TEMPLATE)
-    # Add the parse_markdown_links function to Jinja2 environment
-    template.globals['parse_links'] = parse_markdown_links
-    html_content = template.render(**data)
-    
-    # Generate HTML file
-    try:
-        with open(output_html, 'w', encoding='utf-8') as f:
-            f.write(html_content)
-        print(f"✓ HTML generated: {output_html}")
-    except Exception as e:
-        print(f"Error generating HTML: {e}")
-    
-    # Generate PDF
-    try:
-        HTML(string=html_content).write_pdf(output_pdf)
-        print(f"✓ PDF generated: {output_pdf}")
-    except Exception as e:
-        print(f"Error generating PDF: {e}")
-
-if __name__ == '__main__':
-    generate_resume()

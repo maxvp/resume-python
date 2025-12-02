@@ -4,14 +4,14 @@ email: "[max@maxvphillips.com](mailto:max@maxvphillips.com)"
 website: "[maxvphillips.com](https://www.maxvphillips.com/)"
 
 skills:
-  - category: "Docs-as-Code"
-    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git", "Python"]
+  - category: "Content Strategy & UX"
+    items: ["Information Architecture", "User Journey Mapping", "Content Analytics", "Style Guides"]
   
-  - category: "Content Strategy & Design"
-    items: ["Information Architecture", "UX Writing", "Style Guides", "Figma"]
+  - category: "Docs-as-Code & Development"
+    items: ["Astro", "MDX", "HTML/CSS", "TypeScript", "Git", "Python"]
     
-  - category: "Tools & Platforms"
-    items: ["Jira", "Confluence", "Amplitude", "GitHub", "AI prompt engineering"]
+  - category: "Tools & AI Workflows"
+    items: ["Figma", "AI Prompt Engineering", "Jira", "Confluence", "Amplitude"]
 #  - category: "Content Engineering & Docs-as-Code"
 #    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git/GitHub", "Python", "Confluence"]
 #  
@@ -35,7 +35,12 @@ experience:
         dates: "January 2023 - Present"
         responsibilities:
           - "Led team of 5 writers to update 1000+ docs pages to make cohesive user experience."
+          - "Developing AI-powered automation to detect dashboard changes and update screenshots/videos in documentation, reducing manual maintenance overhead."
           - "Developed internal AI  app to detect changes in products and update videos in documentation."
+
+  - company: "Cloudflare"
+    location: "Remote"
+    roles:
       - title: "Tech Writer Intern"
         dates: "May 2022 - August 2022"
         responsibilities:
@@ -64,7 +69,7 @@ experience:
       - title: "Research Assistant"
         dates: "October 2021 - December 2022"
         responsibilities:
-          - "Investigated impact of mass communication and social media on regional civic action across the US."
+          - "Investigated impact of mass media and social media on regional civic action in the US."
           - "Instituted guidelines for consistent interpretation of language between researchers."
           - "Produced introductory video to showcase interactive policy tracking system."
 
@@ -76,12 +81,19 @@ education:
     gpa: "Summa Cum Laude"
 #    coursework: ["Human-Centered Systems", "Technical Writing", "Usability Testing", "Visual Literacy", "Integrating Writing and Design", "Social Implications of Technology", "Data Structures/Algorithms"]
 
-projects:
-  - name: "Argo Smart Routing docs"
-    technologies: ["HTML", "CSS", "Figma"]
-    url: "[developers.cloudflare.com/argo-smart-routing](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/)"
-    description: "Created new documentation for Cloudflare Argo Smart Routing by compiling product information to establish single point-of-presence for over three million monthly visitors."
-  
+awards:
+  - name: "Best Unified Enterprise Developer Portal"
+    organization: "DevPortal Awards"
+    date: "November 2025"
+    team: "Cloudflare Developer Documentation"
+    # description: "Optional description if needed"
+
+#projects:
+#  - name: "Argo Smart Routing docs"
+#    technologies: ["HTML", "CSS", "Figma"]
+#    url: "[developers.cloudflare.com/argo-smart-routing](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/)"
+#    description: "Created new documentation for Cloudflare Argo Smart Routing by compiling product information to establish single point-of-presence for over three million monthly visitors."
+#  
 #  - name: "Drops"
 #    technologies: ["HTML", "CSS", "JavaScript"]
 #    url: "maxvphillips.com/drops"
