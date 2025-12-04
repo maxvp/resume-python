@@ -44,7 +44,7 @@ TEMPLATE = """
     <style>
         @page {
             size: letter;
-            margin: 0.75in 0.75in;
+            margin: 0;
         }
         
         * {
@@ -58,6 +58,7 @@ TEMPLATE = """
             font-size: 11pt;
             line-height: 1.4;
             color: #000;
+            margin: 0.75in 0.75in;
         }
         
         .header {
