@@ -66,13 +66,23 @@
             background-color: #f0f0f0;
         }
         
+        /* --- SKILLS SECTION FIX --- */
         .skills-list {
-            margin-left: 15pt;
+            /* Now an actual unordered list for proper bullet control */
+            list-style: disc;
+            /* Indent the whole list slightly for visual space */
+            margin-left: 10pt; 
+            padding-left: 0;
+            list-style-position: outside; /* Ensure wrapped text aligns correctly */
         }
         
         .skill-item {
             margin-bottom: 3pt;
+            /* Using list-style takes care of the indent automatically */
+            margin-left: 10pt; 
+            padding-left: 0;
         }
+        /* -------------------------- */
         
         .experience-item, .education-item, .project-item {
             margin-bottom: 8pt;
@@ -170,15 +180,15 @@
     
     <div class="section">
         <div class="section-title">Skills</div>
-        <div class="skills-list">
+        <ul class="skills-list">
             
-            <div class="skill-item">• <strong>Content Strategy & UX:</strong> Content Analytics, Information Architecture, User Journey Mapping, Style Guides, Content Component Libraries, User Research & Testing</div>
+            <li class="skill-item"><strong>Content Strategy & UX:</strong> Content Analytics, Information Architecture, User Journey Mapping, Style Guides, Content Component Libraries, User Research & Testing</li>
             
-            <div class="skill-item">• <strong>Docs-as-Code & Development:</strong> MDX/Markdown, Git, Astro, HTML/CSS, TypeScript, Python</div>
+            <li class="skill-item"><strong>Docs-as-Code & Development:</strong> MDX/Markdown, Git, Astro, HTML/CSS, TypeScript, Python</li>
             
-            <div class="skill-item">• <strong>Tools & AI Workflows:</strong> Amplitude, Figma, Jira, Confluence, Miro, AI Prompt Engineering</div>
+            <li class="skill-item"><strong>Tools & AI Workflows:</strong> Amplitude, Figma, Jira, Confluence, Miro, AI Prompt Engineering</li>
             
-        </div>
+        </ul>
     </div>
     
     <div class="section">
@@ -189,7 +199,7 @@
             <div class="role-item">
                 <div class="role-header">
                     <span style="font-weight: 600;">Technical Writer</span>
-                    <span class="role-dates">January 2023 - Present</span>
+                    <span class="role-dates">January 2023 – Present</span>
                 </div>
                 <div style="margin-bottom: 2pt;">Cloudflare • Remote</div>
                 <ul class="responsibilities">
@@ -210,7 +220,7 @@
             <div class="role-item">
                 <div class="role-header">
                     <span style="font-weight: 600;">Tech Writer Intern</span>
-                    <span class="role-dates">May 2022 - August 2022</span>
+                    <span class="role-dates">May 2022 – August 2022</span>
                 </div>
                 <div style="margin-bottom: 2pt;">Cloudflare • Remote</div>
                 <ul class="responsibilities">
@@ -231,7 +241,7 @@
             <div class="role-item">
                 <div class="role-header">
                     <span style="font-weight: 600;">Research Assistant</span>
-                    <span class="role-dates">October 2021 - December 2022</span>
+                    <span class="role-dates">October 2021 – December 2022</span>
                 </div>
                 <div style="margin-bottom: 2pt;">Pitt Computational Social Dynamics Lab • Pittsburgh, PA</div>
                 <ul class="responsibilities">
@@ -248,7 +258,7 @@
             <div class="role-item">
                 <div class="role-header">
                     <span style="font-weight: 600;">Endpoint Technician</span>
-                    <span class="role-dates">October 2021 - December 2022</span>
+                    <span class="role-dates">October 2021 – December 2022</span>
                 </div>
                 <div style="margin-bottom: 2pt;">University of Pittsburgh Information Technology • Pittsburgh, PA</div>
                 <ul class="responsibilities">

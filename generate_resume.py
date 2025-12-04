@@ -18,6 +18,20 @@ def parse_markdown_links(text):
     pattern = r'\[([^\]]+)\]\(([^\)]+)\)'
     return re.sub(pattern, r'<a href="\2">\1</a>', text)
 
+def convert_hyphens(text):
+    """
+    Converts standard hyphen-minus (-) used in date ranges to the 
+    typographically correct en dash (–).
+    
+    This is applied specifically to date fields.
+    """
+    if not text:
+        return text
+    # Replace single hyphen-minus with en dash, but only if preceded/followed by a word character 
+    # (to avoid replacing hyphens in compound words unnecessarily, though dates are the primary target).
+    # A simple replacement for date ranges should be sufficient and safe.
+    return text.replace('-', '–')
+
 # HTML/CSS template matching your current resume style
 TEMPLATE = """
 <!DOCTYPE html>
@@ -87,13 +101,23 @@ TEMPLATE = """
             background-color: #f0f0f0;
         }
         
+        /* --- SKILLS SECTION FIX --- */
         .skills-list {
-            margin-left: 15pt;
+            /* Now an actual unordered list for proper bullet control */
+            list-style: disc;
+            /* Indent the whole list slightly for visual space */
+            margin-left: 10pt; 
+            padding-left: 0;
+            list-style-position: outside; /* Ensure wrapped text aligns correctly */
         }
         
         .skill-item {
             margin-bottom: 3pt;
+            /* Using list-style takes care of the indent automatically */
+            margin-left: 10pt; 
+            padding-left: 0;
         }
+        /* -------------------------- */
         
         .experience-item, .education-item, .project-item {
             margin-bottom: 8pt;
@@ -191,11 +215,11 @@ TEMPLATE = """
     
     <div class="section">
         <div class="section-title">Skills</div>
-        <div class="skills-list">
+        <ul class="skills-list">
             {% for skill in skills %}
-            <div class="skill-item">• <strong>{{ skill.category }}:</strong> {% for item in skill.get('items', []) %}{{ parse_links(item) | safe }}{% if not loop.last %}, {% endif %}{% endfor %}</div>
+            <li class="skill-item"><strong>{{ skill.category }}:</strong> {% for item in skill.get('items', []) %}{{ parse_links(item) | safe }}{% if not loop.last %}, {% endif %}{% endfor %}</li>
             {% endfor %}
-        </div>
+        </ul>
     </div>
     
     <div class="section">
@@ -206,7 +230,7 @@ TEMPLATE = """
             <div class="role-item">
                 <div class="role-header">
                     <span style="font-weight: 600;">{{ parse_links(role.title) | safe }}</span>
-                    <span class="role-dates">{{ role.dates }}</span>
+                    <span class="role-dates">{{ convert_hyphens(role.dates) }}</span>
                 </div>
                 <div style="margin-bottom: 2pt;">{{ parse_links(job.company) | safe }} • {{ job.location }}</div>
                 <ul class="responsibilities">
@@ -226,7 +250,7 @@ TEMPLATE = """
         <div class="experience-item">
             <div class="role-header">
                 <span style="font-weight: 600;">{{ parse_links(award.name) | safe }}</span>
-                <span class="role-dates">{{ award.date }}</span>
+                <span class="role-dates">{{ convert_hyphens(award.date) }}</span>
             </div>
             <div style="margin-bottom: 2pt;">{{ parse_links(award.organization) | safe }}{% if award.team %} • {{ award.team }}{% endif %}</div>
             {% if award.description %}
@@ -244,7 +268,7 @@ TEMPLATE = """
         <div class="education-item">
             <div class="education-header">
                 <span class="institution">{{ parse_links(edu.degree) | safe }}</span>
-                <span style="font-style: italic;">{{ edu.graduation }}</span>
+                <span style="font-style: italic;">{{ convert_hyphens(edu.graduation) }}</span>
             </div>
             <div style="margin-bottom: 2pt;">{{ parse_links(edu.institution) | safe }}{% if edu.gpa %} • {{ edu.gpa }}{% endif %}</div>
             {% if edu.coursework %}
@@ -276,8 +300,10 @@ def generate_resume(yaml_file='resume.yaml', output_pdf='resume.pdf', output_htm
 
     # Render template
     template = Template(TEMPLATE)
-    # Add the parse_markdown_links function to Jinja2 environment
+    # Add the custom functions to Jinja2 environment
     template.globals['parse_links'] = parse_markdown_links
+    template.globals['convert_hyphens'] = convert_hyphens
+    
     html_content = template.render(**data)
     
     # Generate HTML file
