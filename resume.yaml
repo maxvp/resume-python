@@ -8,10 +8,10 @@ skills:
     items: ["Information Architecture (IA)", "Component-Based Content", "User Journey Mapping", "Style Guides", "AI-Assisted Workflows", "Amplitude", "User Research"]
 
   - category: "Docs-as-Code & Development"
-    items: ["MDX/Markdown", "Git & CI/CD Pipelines", "Astro", "HTML/CSS", "Python", "TypeScript", "Linux/CLI"]
+    items: ["MDX/Markdown", "Git", "Astro", "HTML/CSS", "Python", "TypeScript"]
 
   - category: "Infrastructure & DevOps"
-    items: ["OpenAPI/REST APIs", "Terraform", "Mermaid.js"]
+    items: ["OpenAPI/REST APIs", "Terraform", "CI/CD Pipelines", "Linux/CLI", "Docker"]
 
 #  - category: "Content Engineering & Docs-as-Code"
 #    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git/GitHub", "Python", "Confluence"]
