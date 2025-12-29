@@ -20,14 +20,14 @@ def parse_markdown_links(text):
 
 def convert_hyphens(text):
     """
-    Converts standard hyphen-minus (-) used in date ranges to the 
+    Converts standard hyphen-minus (-) used in date ranges to the
     typographically correct en dash (–).
-    
+
     This is applied specifically to date fields.
     """
     if not text:
         return text
-    # Replace single hyphen-minus with en dash, but only if preceded/followed by a word character 
+    # Replace single hyphen-minus with en dash, but only if preceded/followed by a word character
     # (to avoid replacing hyphens in compound words unnecessarily, though dates are the primary target).
     # A simple replacement for date ranges should be sufficient and safe.
     return text.replace('-', '–')
@@ -38,6 +38,7 @@ TEMPLATE = """
 <html>
 <head>
     <meta charset="utf-8">
+    <title>Maximillian V. Phillips</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -46,13 +47,13 @@ TEMPLATE = """
             size: letter;
             margin: 0;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             font-size: 11pt;
@@ -60,28 +61,28 @@ TEMPLATE = """
             color: #000;
             margin: 0.75in 0.75in;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 8pt;
         }
-        
+
         .header h1 {
             font-size: 16pt;
             font-weight: 700;
             margin-bottom: 2pt;
             letter-spacing: 0.02em;
         }
-        
+
         .header .contact {
             font-size: 11pt;
             font-weight: 400;
         }
-        
+
         .section {
             margin-bottom: 10pt;
         }
-        
+
         .section-title {
             font-size: 11pt;
             font-weight: 700;
@@ -91,39 +92,39 @@ TEMPLATE = """
             padding-bottom: 2pt;
             border-bottom: 0.5pt solid #000;
         }
-        
+
         a {
             color: #000;
             text-decoration: none;
             border-bottom: 1px dotted #999;
         }
-        
+
         a:hover {
             background-color: #f0f0f0;
         }
-        
+
         /* --- SKILLS SECTION FIX --- */
         .skills-list {
             /* Now an actual unordered list for proper bullet control */
             list-style: disc;
             /* Indent the whole list slightly for visual space */
-            margin-left: 10pt; 
+            margin-left: 10pt;
             padding-left: 0;
             list-style-position: outside; /* Ensure wrapped text aligns correctly */
         }
-        
+
         .skill-item {
             margin-bottom: 3pt;
             /* Using list-style takes care of the indent automatically */
-            margin-left: 10pt; 
+            margin-left: 10pt;
             padding-left: 0;
         }
         /* -------------------------- */
-        
+
         .experience-item, .education-item, .project-item {
             margin-bottom: 8pt;
         }
-        
+
         .company-header {
             display: flex;
             justify-content: space-between;
@@ -131,21 +132,21 @@ TEMPLATE = """
             margin-bottom: 0pt;
             font-weight: 600;
         }
-        
+
         .company-name {
             font-weight: 600;
         }
-        
+
         .company-dates {
             font-weight: 400;
             font-style: italic;
         }
-        
+
         .role-item {
             margin-left: 0;
             margin-bottom: 4pt;
         }
-        
+
         .role-header {
             display: flex;
             justify-content: space-between;
@@ -153,56 +154,56 @@ TEMPLATE = """
             font-weight: 400;
             margin-top: 1pt;
         }
-        
+
         .role-dates {
             font-style: italic;
             font-weight: 400;
             font-size: 10pt;
         }
-        
+
         .responsibilities {
             margin-left: 12pt;
             margin-top: 1pt;
         }
-        
+
         .responsibilities li {
             margin-bottom: 1pt;
         }
-        
+
         .project-header {
             margin-bottom: 1pt;
         }
-        
+
         .project-name {
             font-weight: 600;
             display: inline;
         }
-        
+
         .project-tech {
             font-style: italic;
             display: inline;
         }
-        
+
         .project-url {
             float: right;
             font-style: italic;
         }
-        
+
         .coursework {
             margin-left: 12pt;
         }
-        
+
         .education-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 1pt;
         }
-        
+
         .institution {
             font-weight: 600;
         }
-        
+
         .degree-line {
             margin-bottom: 1pt;
         }
@@ -213,7 +214,7 @@ TEMPLATE = """
         <h1>{{ name }}</h1>
         <div class="contact">{{ parse_links(location) }} — {{ parse_links(email) | safe }} — {{ parse_links(website) | safe }}</div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">Skills</div>
         <ul class="skills-list">
@@ -222,7 +223,7 @@ TEMPLATE = """
             {% endfor %}
         </ul>
     </div>
-    
+
     <div class="section">
         <div class="section-title">Experience</div>
         {% for job in experience %}
@@ -244,7 +245,7 @@ TEMPLATE = """
         </div>
         {% endfor %}
     </div>
-    
+
     <div class="section">
         <div class="section-title">Awards</div>
         {% for award in awards %}
@@ -262,7 +263,7 @@ TEMPLATE = """
         </div>
         {% endfor %}
     </div>
-    
+
     <div class="section">
         <div class="section-title">Education</div>
         {% for edu in education %}
@@ -286,7 +287,7 @@ TEMPLATE = """
 
 def generate_resume(yaml_file='resume.yaml', output_pdf='resume.pdf', output_html='resume.html'):
     """Generate PDF and HTML resume from YAML file."""
-    
+
     if not os.path.exists(yaml_file):
         print(f"Error: {yaml_file} not found. Please create the file first.")
         return
@@ -304,9 +305,9 @@ def generate_resume(yaml_file='resume.yaml', output_pdf='resume.pdf', output_htm
     # Add the custom functions to Jinja2 environment
     template.globals['parse_links'] = parse_markdown_links
     template.globals['convert_hyphens'] = convert_hyphens
-    
+
     html_content = template.render(**data)
-    
+
     # Generate HTML file
     try:
         with open(output_html, 'w', encoding='utf-8') as f:
@@ -314,7 +315,7 @@ def generate_resume(yaml_file='resume.yaml', output_pdf='resume.pdf', output_htm
         print(f"✓ HTML generated: {output_html}")
     except Exception as e:
         print(f"Error generating HTML: {e}")
-    
+
     # Generate PDF
     try:
         HTML(string=html_content).write_pdf(output_pdf)
