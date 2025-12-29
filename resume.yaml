@@ -4,20 +4,21 @@ email: "[max@maxvphillips.com](mailto:max@maxvphillips.com)"
 website: "[maxvphillips.com](https://www.maxvphillips.com/)"
 
 skills:
-  - category: "Content Strategy & UX"
-    items: ["Content Analytics", "Information Architecture", "User Journey Mapping", "Style Guides", "Content Component Libraries", "User Research & Testing"]
-  
+  - category: "Documentation & Content Strategy"
+    items: ["Information Architecture (IA)", "Component-Based Content", "User Journey Mapping", "Style Guides", "AI-Assisted Workflows", "Amplitude", "User Research"]
+
   - category: "Docs-as-Code & Development"
-    items: ["MDX/Markdown", "Git", "Astro", "HTML/CSS", "TypeScript", "Python"]
-    
-  - category: "Tools & AI Workflows"
-    items: [ "Amplitude", "Figma", "Jira", "Confluence", "Miro", "AI Prompt Engineering"]
+    items: ["MDX/Markdown", "Git & CI/CD Pipelines", "Astro", "HTML/CSS", "Python", "TypeScript", "Linux/CLI"]
+
+  - category: "Infrastructure & DevOps"
+    items: ["OpenAPI/REST APIs", "Terraform", "Mermaid.js"]
+
 #  - category: "Content Engineering & Docs-as-Code"
 #    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git/GitHub", "Python", "Confluence"]
-#  
+#
 #  - category: "Content Strategy & UX Tools"
 #    items: ["Figma", "Jira", "Confluence", "Amplitude", "Information Architecture", "UX Writing"]
-#    
+#
 #  - category: "Technical Writing & AI"
 #    items: ["AI Prompt Engineering", "Windsurf", "Style Guides", "Technical Editing"]
 #  - category: "Tools"
@@ -44,7 +45,7 @@ experience:
       - title: "Tech Writer Intern"
         dates: "May 2022 - August 2022"
         responsibilities:
-          - "Served 3M+ unique monthly visitors by creating documentation for [web performance product](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/)."
+          - "Authored documentation to serve 3M+ unique monthly users of [web performance product](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/)."
           - "Unified user experience across product docs by implementing extensible Hugo site components."
           - "Promoted accessibility and inclusion by advocating for refined language and site improvements."
       # Add your internship here when you want nested roles:
@@ -52,7 +53,7 @@ experience:
 #        dates: "Summer 2022"
 #        responsibilities:
 #          - "Your internship responsibilities here"
-  
+
   - company: "Pitt Computational Social Dynamics Lab"
     location: "Pittsburgh, PA"
     roles:
@@ -81,20 +82,20 @@ awards:
   - name: "Best Unified Enterprise Developer Portal"
     organization: "[DevPortal Awards](https://devportalawards.org/winners?year=2025)"
     date: "November 2025"
-    team: "Cloudflare Docs"
-    description: "Led unified Cloudflare One documentation experience efforts to serve enterprise users."
+    team: "Cloudflare Developer Docs"
+#    description: "Led unified Cloudflare One documentation experience efforts to serve enterprise users."
 
 #projects:
 #  - name: "Argo Smart Routing docs"
 #    technologies: ["HTML", "CSS", "Figma"]
 #    url: "[developers.cloudflare.com/argo-smart-routing](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/)"
 #    description: "Created new documentation for Cloudflare Argo Smart Routing by compiling product information to establish single point-of-presence for over three million monthly visitors."
-#  
+#
 #  - name: "Drops"
 #    technologies: ["HTML", "CSS", "JavaScript"]
 #    url: "maxvphillips.com/drops"
 #    description: "Designed virtual museum exhibit site in the style of 1990s operating systems to explore the relationship between media and modern digital distribution platforms."
-#  
+#
 #  - name: "Burghquest"
 #    technologies: ["Unity", "C#", "Vuforia Engine", "Blender"]
 #    url: "youtu.be/DOGXo5Eu62U"
