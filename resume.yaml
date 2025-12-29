@@ -11,7 +11,7 @@ skills:
     items: ["MDX/Markdown", "Git", "Astro", "HTML/CSS", "Python", "TypeScript"]
 
   - category: "Infrastructure & DevOps"
-    items: ["OpenAPI/REST APIs", "Terraform", "CI/CD Pipelines", "Linux/CLI", "Docker"]
+    items: ["OpenAPI/REST APIs", "Terraform", "Docker", "CI/CD Pipelines", "Linux/CLI"]
 
 #  - category: "Content Engineering & Docs-as-Code"
 #    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git/GitHub", "Python", "Confluence"]
@@ -35,9 +35,9 @@ experience:
       - title: "Technical Writer"
         dates: "January 2023 - Present"
         responsibilities:
-          - "Reduced manual writer maintenance overhead by developing automated screenshot system with [Cloudflare Browser Rendering](https://developers.cloudflare.com/browser-rendering/) and [Workers AI](https://developers.cloudflare.com/workers-ai/) to detect product changes and update docs."
           - "Unified enterprise Zero Trust docs and product user experience by leading data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions."
-          - "Serve as primary point of contact for open source Cloudflare Docs site to triage 100+ monthly contributions and make consistent content decisions with cross-functional partners."
+          - "Reduced manual writer maintenance overhead by developing automated screenshot system with [Cloudflare Browser Rendering](https://developers.cloudflare.com/browser-rendering/) and [Workers AI](https://developers.cloudflare.com/workers-ai/) to detect product changes and update docs."
+          - "Manage internal and community contributions to open source Cloudflare Docs site, triaging 100+ monthly pull requests to make consistent content decisions with cross-functional partners."
 
   - company: "Cloudflare"
     location: "Remote"
@@ -46,7 +46,7 @@ experience:
         dates: "May 2022 - August 2022"
         responsibilities:
           - "Authored documentation for [Argo Smart Routing](https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/) to serve 3M+ unique monthly visitors."
-          - "Unified user experience across product docs by implementing extensible Hugo site components."
+          - "Improved user experience across product docs by implementing extensible Hugo site components."
           - "Promoted accessibility and inclusion by advocating for refined language and site improvements."
       # Add your internship here when you want nested roles:
 #      - title: "Technical Writing Intern"
