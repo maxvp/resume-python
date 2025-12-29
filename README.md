@@ -8,3 +8,5 @@
 4. Open `resume.pdf` in a PDF viewer (Preview on Mac, Adobe, SumatraPDF on Windows, etc.).
 5. Edit and save `resume.yaml`. The PDF will auto-regenerate and the viewer will auto-refresh.
 6. Export `resume.html` and `resume.pdf`.
+
+To make changes to HTML/CSS, edit the HTML/CSS section in `generate_resume.py`, then re-run the script to render changes.
