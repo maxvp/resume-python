@@ -1,0 +1,17 @@
+brotli==1.2.0
+cffi==2.0.0
+cssselect2==0.8.0
+fonttools==4.61.1
+Jinja2==3.1.6
+MarkupSafe==3.0.3
+pillow==12.1.0
+pycparser==2.23
+pydyf==0.12.1
+pyphen==0.17.2
+PyYAML==6.0.3
+tinycss2==1.5.1
+tinyhtml5==2.0.0
+watchdog==6.0.0
+weasyprint==68.0
+webencodings==0.5.1
+zopfli==0.4.0
