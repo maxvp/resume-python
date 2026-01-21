@@ -5,13 +5,29 @@ website: "[maxvphillips.com](https://www.maxvphillips.com/)"
 
 skills:
   - category: "Documentation & Content Strategy"
-    items: ["Information Architecture (IA)", "Component-Based Content", "User Journey Mapping", "Style Guides", "AI-Assisted Workflows", "Amplitude", "User Research"]
+    items:
+      [
+        "Information Architecture (IA)",
+        "Component-Based Content",
+        "User Journey Mapping",
+        "Style Guides",
+        "AI-Assisted Workflows",
+        "Amplitude",
+        "User Research",
+      ]
 
   - category: "Docs-as-Code & Development"
     items: ["MDX/Markdown", "Git", "Astro", "HTML/CSS", "Python", "TypeScript"]
 
   - category: "Infrastructure & DevOps"
-    items: ["OpenAPI/REST APIs", "Terraform", "Docker", "CI/CD Pipelines", "Linux/CLI"]
+    items:
+      [
+        "OpenAPI/REST APIs",
+        "Terraform",
+        "Docker",
+        "CI/CD Pipelines",
+        "Linux/CLI",
+      ]
 
 #  - category: "Content Engineering & Docs-as-Code"
 #    items: ["Astro", "MDX/Markdown", "HTML", "CSS", "JavaScript/TypeScript", "Git/GitHub", "Python", "Confluence"]
@@ -35,8 +51,8 @@ experience:
       - title: "Technical Writer"
         dates: "January 2023 - Present"
         responsibilities:
-          - "Unified enterprise Zero Trust docs and product user experience by leading data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions."
-          - "Reduced manual writer maintenance overhead by developing automated screenshot system with [Cloudflare Browser Rendering](https://developers.cloudflare.com/browser-rendering/) and [Workers AI](https://developers.cloudflare.com/workers-ai/) to detect product changes and update docs."
+          - "Unified enterprise Zero Trust docs and product user experiences by leading data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions."
+          - "Reduced manual writer maintenance overhead by developing AI-powered screenshot system with [Cloudflare Browser Rendering](https://developers.cloudflare.com/browser-rendering/) and [Workers AI](https://developers.cloudflare.com/workers-ai/) to detect product changes and update docs."
           - "Manage internal and community contributions to open source Cloudflare Docs site, triaging 100+ monthly pull requests to make consistent content decisions with cross-functional partners."
 
   - company: "Cloudflare"
@@ -49,10 +65,10 @@ experience:
           - "Improved user experience across product docs by implementing extensible Hugo site components."
           - "Promoted accessibility and inclusion by advocating for refined language and site improvements."
       # Add your internship here when you want nested roles:
-#      - title: "Technical Writing Intern"
-#        dates: "Summer 2022"
-#        responsibilities:
-#          - "Your internship responsibilities here"
+  #      - title: "Technical Writing Intern"
+  #        dates: "Summer 2022"
+  #        responsibilities:
+  #          - "Your internship responsibilities here"
 
   - company: "Pitt Computational Social Dynamics Lab"
     location: "Pittsburgh, PA"
