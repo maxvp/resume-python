@@ -51,7 +51,7 @@ experience:
       - title: "Technical Writer"
         dates: "January 2023 - Present"
         responsibilities:
-          - "Unified enterprise Zero Trust docs and product user experiences by leading data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions."
+          - "Unified enterprise Zero Trust developer experience by leading data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions."
           - "Reduced manual writer maintenance overhead by developing AI-powered screenshot system with [Cloudflare Browser Rendering](https://developers.cloudflare.com/browser-rendering/) and [Workers AI](https://developers.cloudflare.com/workers-ai/) to detect product changes and update docs."
           - "Manage internal and community contributions to open source Cloudflare Docs site, triaging 100+ monthly pull requests to make consistent content decisions with cross-functional partners."
 
